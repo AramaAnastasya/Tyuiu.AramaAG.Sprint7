@@ -8,8 +8,9 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestMethodCountStaff()
         {
+            DataService dataService = new DataService();
         }
     }
 }
