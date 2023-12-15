@@ -43,7 +43,9 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             this.DateOpen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Staz = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Education = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelTop_AAG.SuspendLayout();
+            this.panelLeft_AAG.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStaff_AAG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,6 +76,7 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             // 
             // panelLeft_AAG
             // 
+            this.panelLeft_AAG.Controls.Add(this.button1);
             this.panelLeft_AAG.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft_AAG.Location = new System.Drawing.Point(0, 121);
             this.panelLeft_AAG.Name = "panelLeft_AAG";
@@ -173,6 +176,16 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             this.Education.ReadOnly = true;
             this.Education.Width = 150;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(38, 565);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(215, 79);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Создать отчёт";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.CreateReportClick_AAG);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -188,6 +201,7 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.panelTop_AAG.ResumeLayout(false);
             this.panelTop_AAG.PerformLayout();
+            this.panelLeft_AAG.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStaff_AAG)).EndInit();
             this.ResumeLayout(false);
 
@@ -209,6 +223,7 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
         private System.Windows.Forms.DataGridViewTextBoxColumn DateOpen;
         private System.Windows.Forms.DataGridViewTextBoxColumn Staz;
         private System.Windows.Forms.DataGridViewTextBoxColumn Education;
+        private System.Windows.Forms.Button button1;
     }
 }
 

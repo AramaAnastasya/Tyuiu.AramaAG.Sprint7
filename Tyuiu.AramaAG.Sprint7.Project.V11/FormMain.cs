@@ -33,5 +33,12 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
                 dataGridViewStaff_AAG.Columns[i].Width = 75;
             }
         }
+
+        private void CreateReportClick_AAG(object sender, EventArgs e)
+        {
+            FormReport formReport = new FormReport();
+            formReport.Show();
+
+        }
     }
 }

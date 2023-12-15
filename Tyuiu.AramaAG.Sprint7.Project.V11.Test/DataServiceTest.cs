@@ -11,6 +11,7 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11.Test
         public void TestMethodCountStaff()
         {
             DataService dataService = new DataService();
+            int wait = 0;
         }
     }
 }
