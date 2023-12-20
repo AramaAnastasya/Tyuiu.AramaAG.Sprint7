@@ -31,38 +31,43 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
         {
             this.panelTop_AAG = new System.Windows.Forms.Panel();
             this.panelRight_AAG = new System.Windows.Forms.Panel();
+            this.buttonSaveEdit_AGG = new System.Windows.Forms.Button();
+            this.buttonEditData_AGG = new System.Windows.Forms.Button();
             this.panelLeft_AAG = new System.Windows.Forms.Panel();
+            this.panelLeftButtom_AAG = new System.Windows.Forms.Panel();
             this.CreateReport_AAG = new System.Windows.Forms.Button();
             this.dataGridViewStaff_AAG = new System.Windows.Forms.DataGridView();
             this.OpenFileDialogData_AAG = new System.Windows.Forms.OpenFileDialog();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.panelCenter_AAG = new System.Windows.Forms.Panel();
+            this.saveFileDialogData_AAG = new System.Windows.Forms.SaveFileDialog();
+            this.buttonOpenData_AAG = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.splitterRight_AAG = new System.Windows.Forms.Splitter();
+            this.panelCentreRight_AAG = new System.Windows.Forms.Panel();
+            this.splitterRight2_AAG = new System.Windows.Forms.Splitter();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.buttonHelp_AAG = new System.Windows.Forms.Button();
+            this.buttonAboutMe_AAG = new System.Windows.Forms.Button();
             this.Familia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HausAddres = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Birhday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Staff = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateOpen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Staz = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Education = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonOpenData_AAG = new System.Windows.Forms.Button();
-            this.panelLeftTop_AAG = new System.Windows.Forms.Panel();
-            this.panelLeftButtom_AAG = new System.Windows.Forms.Panel();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.panelCenter_AAG = new System.Windows.Forms.Panel();
-            this.buttonEditData_AGG = new System.Windows.Forms.Button();
-            this.panelRightTop_AAG = new System.Windows.Forms.Panel();
-            this.buttonSaveEdit_AGG = new System.Windows.Forms.Button();
-            this.saveFileDialogData_AAG = new System.Windows.Forms.SaveFileDialog();
-            this.panelLeftTop2_AAG = new System.Windows.Forms.Panel();
-            this.panelRight_AAG.SuspendLayout();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panelLeft_AAG.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStaff_AAG)).BeginInit();
-            this.panelLeftTop_AAG.SuspendLayout();
             this.panelLeftButtom_AAG.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStaff_AAG)).BeginInit();
             this.panelCenter_AAG.SuspendLayout();
-            this.panelRightTop_AAG.SuspendLayout();
-            this.panelLeftTop2_AAG.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panelCentreRight_AAG.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTop_AAG
@@ -70,38 +75,84 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             this.panelTop_AAG.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop_AAG.Location = new System.Drawing.Point(0, 0);
             this.panelTop_AAG.Name = "panelTop_AAG";
-            this.panelTop_AAG.Size = new System.Drawing.Size(1924, 121);
+            this.panelTop_AAG.Size = new System.Drawing.Size(1896, 98);
             this.panelTop_AAG.TabIndex = 0;
             // 
             // panelRight_AAG
             // 
-            this.panelRight_AAG.Controls.Add(this.panelLeftTop2_AAG);
-            this.panelRight_AAG.Controls.Add(this.panelRightTop_AAG);
             this.panelRight_AAG.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelRight_AAG.Location = new System.Drawing.Point(1718, 121);
+            this.panelRight_AAG.Location = new System.Drawing.Point(1862, 98);
             this.panelRight_AAG.Name = "panelRight_AAG";
-            this.panelRight_AAG.Size = new System.Drawing.Size(206, 847);
+            this.panelRight_AAG.Size = new System.Drawing.Size(34, 870);
             this.panelRight_AAG.TabIndex = 1;
+            // 
+            // buttonSaveEdit_AGG
+            // 
+            this.buttonSaveEdit_AGG.BackColor = System.Drawing.Color.White;
+            this.buttonSaveEdit_AGG.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSaveEdit_AGG.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonSaveEdit_AGG.Enabled = false;
+            this.buttonSaveEdit_AGG.FlatAppearance.BorderSize = 0;
+            this.buttonSaveEdit_AGG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSaveEdit_AGG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(72)))), ((int)(((byte)(168)))));
+            this.buttonSaveEdit_AGG.Location = new System.Drawing.Point(0, 78);
+            this.buttonSaveEdit_AGG.Name = "buttonSaveEdit_AGG";
+            this.buttonSaveEdit_AGG.Size = new System.Drawing.Size(220, 52);
+            this.buttonSaveEdit_AGG.TabIndex = 2;
+            this.buttonSaveEdit_AGG.Text = "Сохранить";
+            this.buttonSaveEdit_AGG.UseVisualStyleBackColor = false;
+            this.buttonSaveEdit_AGG.Click += new System.EventHandler(this.ClickSaveData);
+            // 
+            // buttonEditData_AGG
+            // 
+            this.buttonEditData_AGG.BackColor = System.Drawing.Color.White;
+            this.buttonEditData_AGG.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEditData_AGG.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonEditData_AGG.FlatAppearance.BorderSize = 0;
+            this.buttonEditData_AGG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditData_AGG.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonEditData_AGG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(72)))), ((int)(((byte)(168)))));
+            this.buttonEditData_AGG.Location = new System.Drawing.Point(0, 0);
+            this.buttonEditData_AGG.Name = "buttonEditData_AGG";
+            this.buttonEditData_AGG.Size = new System.Drawing.Size(220, 81);
+            this.buttonEditData_AGG.TabIndex = 0;
+            this.buttonEditData_AGG.Text = "Редактировать данные";
+            this.buttonEditData_AGG.UseVisualStyleBackColor = false;
+            this.buttonEditData_AGG.Click += new System.EventHandler(this.EditDataClick);
             // 
             // panelLeft_AAG
             // 
-            this.panelLeft_AAG.Controls.Add(this.panelLeftButtom_AAG);
-            this.panelLeft_AAG.Controls.Add(this.panelLeftTop_AAG);
+            this.panelLeft_AAG.Controls.Add(this.panel2);
+            this.panelLeft_AAG.Controls.Add(this.buttonHelp_AAG);
+            this.panelLeft_AAG.Controls.Add(this.buttonAboutMe_AAG);
             this.panelLeft_AAG.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLeft_AAG.Location = new System.Drawing.Point(0, 121);
+            this.panelLeft_AAG.Location = new System.Drawing.Point(0, 98);
             this.panelLeft_AAG.Name = "panelLeft_AAG";
-            this.panelLeft_AAG.Size = new System.Drawing.Size(207, 847);
+            this.panelLeft_AAG.Size = new System.Drawing.Size(216, 870);
             this.panelLeft_AAG.TabIndex = 2;
+            // 
+            // panelLeftButtom_AAG
+            // 
+            this.panelLeftButtom_AAG.Controls.Add(this.CreateReport_AAG);
+            this.panelLeftButtom_AAG.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelLeftButtom_AAG.Location = new System.Drawing.Point(0, 802);
+            this.panelLeftButtom_AAG.Name = "panelLeftButtom_AAG";
+            this.panelLeftButtom_AAG.Size = new System.Drawing.Size(220, 68);
+            this.panelLeftButtom_AAG.TabIndex = 3;
             // 
             // CreateReport_AAG
             // 
-            this.CreateReport_AAG.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.CreateReport_AAG.Location = new System.Drawing.Point(0, 43);
+            this.CreateReport_AAG.BackColor = System.Drawing.Color.White;
+            this.CreateReport_AAG.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CreateReport_AAG.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CreateReport_AAG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CreateReport_AAG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(72)))), ((int)(((byte)(168)))));
+            this.CreateReport_AAG.Location = new System.Drawing.Point(0, 0);
             this.CreateReport_AAG.Name = "CreateReport_AAG";
-            this.CreateReport_AAG.Size = new System.Drawing.Size(207, 57);
+            this.CreateReport_AAG.Size = new System.Drawing.Size(220, 68);
             this.CreateReport_AAG.TabIndex = 0;
             this.CreateReport_AAG.Text = "Создать отчёт";
-            this.CreateReport_AAG.UseVisualStyleBackColor = true;
+            this.CreateReport_AAG.UseVisualStyleBackColor = false;
             this.CreateReport_AAG.Click += new System.EventHandler(this.CreateReportClick_AAG);
             // 
             // dataGridViewStaff_AAG
@@ -111,25 +162,194 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             this.Familia,
             this.NameS,
             this.LastName,
-            this.HausAddres,
-            this.Phone,
             this.Birhday,
+            this.Salary,
             this.Staff,
-            this.DateOpen,
-            this.Staz,
-            this.Education});
+            this.Staz});
             this.dataGridViewStaff_AAG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewStaff_AAG.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewStaff_AAG.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.dataGridViewStaff_AAG.Name = "dataGridViewStaff_AAG";
             this.dataGridViewStaff_AAG.RowHeadersVisible = false;
             this.dataGridViewStaff_AAG.RowHeadersWidth = 62;
             this.dataGridViewStaff_AAG.RowTemplate.Height = 28;
-            this.dataGridViewStaff_AAG.Size = new System.Drawing.Size(1508, 847);
+            this.dataGridViewStaff_AAG.Size = new System.Drawing.Size(1439, 870);
             this.dataGridViewStaff_AAG.TabIndex = 3;
+            this.dataGridViewStaff_AAG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStaff_AAG_CellContentClick);
             // 
             // OpenFileDialogData_AAG
             // 
             this.OpenFileDialogData_AAG.FileName = "openFileDialog1";
+            // 
+            // splitter1
+            // 
+            this.splitter1.Location = new System.Drawing.Point(216, 98);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(3, 870);
+            this.splitter1.TabIndex = 4;
+            this.splitter1.TabStop = false;
+            // 
+            // panelCenter_AAG
+            // 
+            this.panelCenter_AAG.Controls.Add(this.panel3);
+            this.panelCenter_AAG.Controls.Add(this.panel1);
+            this.panelCenter_AAG.Controls.Add(this.panelLeftButtom_AAG);
+            this.panelCenter_AAG.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelCenter_AAG.Location = new System.Drawing.Point(219, 98);
+            this.panelCenter_AAG.Name = "panelCenter_AAG";
+            this.panelCenter_AAG.Size = new System.Drawing.Size(220, 870);
+            this.panelCenter_AAG.TabIndex = 5;
+            // 
+            // buttonOpenData_AAG
+            // 
+            this.buttonOpenData_AAG.BackColor = System.Drawing.Color.White;
+            this.buttonOpenData_AAG.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonOpenData_AAG.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonOpenData_AAG.FlatAppearance.BorderSize = 0;
+            this.buttonOpenData_AAG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOpenData_AAG.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.buttonOpenData_AAG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(72)))), ((int)(((byte)(168)))));
+            this.buttonOpenData_AAG.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.buttonOpenData_AAG.Location = new System.Drawing.Point(0, 0);
+            this.buttonOpenData_AAG.Name = "buttonOpenData_AAG";
+            this.buttonOpenData_AAG.Size = new System.Drawing.Size(220, 59);
+            this.buttonOpenData_AAG.TabIndex = 1;
+            this.buttonOpenData_AAG.Text = "  Открыть данные";
+            this.buttonOpenData_AAG.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.buttonOpenData_AAG.UseVisualStyleBackColor = false;
+            this.buttonOpenData_AAG.Click += new System.EventHandler(this.OpenFileClick);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(216, 81);
+            this.panel2.TabIndex = 5;
+            // 
+            // splitterRight_AAG
+            // 
+            this.splitterRight_AAG.Location = new System.Drawing.Point(439, 98);
+            this.splitterRight_AAG.Name = "splitterRight_AAG";
+            this.splitterRight_AAG.Size = new System.Drawing.Size(3, 870);
+            this.splitterRight_AAG.TabIndex = 6;
+            this.splitterRight_AAG.TabStop = false;
+            // 
+            // panelCentreRight_AAG
+            // 
+            this.panelCentreRight_AAG.Controls.Add(this.panel4);
+            this.panelCentreRight_AAG.Controls.Add(this.dataGridViewStaff_AAG);
+            this.panelCentreRight_AAG.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelCentreRight_AAG.Location = new System.Drawing.Point(442, 98);
+            this.panelCentreRight_AAG.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.panelCentreRight_AAG.Name = "panelCentreRight_AAG";
+            this.panelCentreRight_AAG.Size = new System.Drawing.Size(1439, 870);
+            this.panelCentreRight_AAG.TabIndex = 7;
+            // 
+            // splitterRight2_AAG
+            // 
+            this.splitterRight2_AAG.Location = new System.Drawing.Point(1881, 98);
+            this.splitterRight2_AAG.Name = "splitterRight2_AAG";
+            this.splitterRight2_AAG.Size = new System.Drawing.Size(3, 870);
+            this.splitterRight2_AAG.TabIndex = 8;
+            this.splitterRight2_AAG.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.buttonOpenData_AAG);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(220, 124);
+            this.panel1.TabIndex = 2;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(72)))), ((int)(((byte)(168)))));
+            this.button2.Location = new System.Drawing.Point(0, 59);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(220, 81);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Добавить данные";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.buttonEditData_AGG);
+            this.panel3.Controls.Add(this.buttonSaveEdit_AGG);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 124);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(220, 130);
+            this.panel3.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(113)))), ((int)(((byte)(209)))));
+            this.button1.Image = global::Tyuiu.AramaAG.Sprint7.Project.V11.Properties.Resources.People;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(216, 81);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Сотрудники";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // buttonHelp_AAG
+            // 
+            this.buttonHelp_AAG.BackColor = System.Drawing.Color.White;
+            this.buttonHelp_AAG.Cursor = System.Windows.Forms.Cursors.Help;
+            this.buttonHelp_AAG.FlatAppearance.BorderSize = 0;
+            this.buttonHelp_AAG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHelp_AAG.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.buttonHelp_AAG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(113)))), ((int)(((byte)(209)))));
+            this.buttonHelp_AAG.Image = global::Tyuiu.AramaAG.Sprint7.Project.V11.Properties.Resources.Help;
+            this.buttonHelp_AAG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHelp_AAG.Location = new System.Drawing.Point(3, 159);
+            this.buttonHelp_AAG.Name = "buttonHelp_AAG";
+            this.buttonHelp_AAG.Size = new System.Drawing.Size(216, 72);
+            this.buttonHelp_AAG.TabIndex = 4;
+            this.buttonHelp_AAG.Text = "  Помощь";
+            this.buttonHelp_AAG.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonHelp_AAG.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonHelp_AAG.UseVisualStyleBackColor = false;
+            this.buttonHelp_AAG.Click += new System.EventHandler(this.buttonHelp_AAG_Click);
+            // 
+            // buttonAboutMe_AAG
+            // 
+            this.buttonAboutMe_AAG.BackColor = System.Drawing.Color.White;
+            this.buttonAboutMe_AAG.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAboutMe_AAG.FlatAppearance.BorderSize = 0;
+            this.buttonAboutMe_AAG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAboutMe_AAG.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.buttonAboutMe_AAG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(113)))), ((int)(((byte)(209)))));
+            this.buttonAboutMe_AAG.Image = global::Tyuiu.AramaAG.Sprint7.Project.V11.Properties.Resources.Info;
+            this.buttonAboutMe_AAG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAboutMe_AAG.Location = new System.Drawing.Point(3, 87);
+            this.buttonAboutMe_AAG.Name = "buttonAboutMe_AAG";
+            this.buttonAboutMe_AAG.Size = new System.Drawing.Size(216, 72);
+            this.buttonAboutMe_AAG.TabIndex = 2;
+            this.buttonAboutMe_AAG.Text = "  О нас";
+            this.buttonAboutMe_AAG.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonAboutMe_AAG.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonAboutMe_AAG.UseVisualStyleBackColor = false;
+            this.buttonAboutMe_AAG.Click += new System.EventHandler(this.buttonAboutMe_AAG_Click);
             // 
             // Familia
             // 
@@ -154,29 +374,21 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             this.LastName.ReadOnly = true;
             this.LastName.Width = 150;
             // 
-            // HausAddres
-            // 
-            this.HausAddres.HeaderText = "Домашний адрес";
-            this.HausAddres.MinimumWidth = 8;
-            this.HausAddres.Name = "HausAddres";
-            this.HausAddres.ReadOnly = true;
-            this.HausAddres.Width = 150;
-            // 
-            // Phone
-            // 
-            this.Phone.HeaderText = "Телефон";
-            this.Phone.MinimumWidth = 8;
-            this.Phone.Name = "Phone";
-            this.Phone.ReadOnly = true;
-            this.Phone.Width = 150;
-            // 
             // Birhday
             // 
-            this.Birhday.HeaderText = "день рождения";
+            this.Birhday.HeaderText = "День рождения";
             this.Birhday.MinimumWidth = 8;
             this.Birhday.Name = "Birhday";
             this.Birhday.ReadOnly = true;
             this.Birhday.Width = 150;
+            // 
+            // Salary
+            // 
+            this.Salary.HeaderText = "Зарплата";
+            this.Salary.MinimumWidth = 8;
+            this.Salary.Name = "Salary";
+            this.Salary.ReadOnly = true;
+            this.Salary.Width = 150;
             // 
             // Staff
             // 
@@ -186,14 +398,6 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             this.Staff.ReadOnly = true;
             this.Staff.Width = 150;
             // 
-            // DateOpen
-            // 
-            this.DateOpen.HeaderText = "Дата зачисления";
-            this.DateOpen.MinimumWidth = 8;
-            this.DateOpen.Name = "DateOpen";
-            this.DateOpen.ReadOnly = true;
-            this.DateOpen.Width = 150;
-            // 
             // Staz
             // 
             this.Staz.HeaderText = "Стаж";
@@ -202,106 +406,23 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             this.Staz.ReadOnly = true;
             this.Staz.Width = 150;
             // 
-            // Education
+            // panel4
             // 
-            this.Education.HeaderText = "Образование";
-            this.Education.MinimumWidth = 8;
-            this.Education.Name = "Education";
-            this.Education.ReadOnly = true;
-            this.Education.Width = 150;
-            // 
-            // buttonOpenData_AAG
-            // 
-            this.buttonOpenData_AAG.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonOpenData_AAG.Location = new System.Drawing.Point(0, 0);
-            this.buttonOpenData_AAG.Name = "buttonOpenData_AAG";
-            this.buttonOpenData_AAG.Size = new System.Drawing.Size(207, 100);
-            this.buttonOpenData_AAG.TabIndex = 1;
-            this.buttonOpenData_AAG.Text = "Открыть данные";
-            this.buttonOpenData_AAG.UseVisualStyleBackColor = true;
-            this.buttonOpenData_AAG.Click += new System.EventHandler(this.OpenFileClick);
-            // 
-            // panelLeftTop_AAG
-            // 
-            this.panelLeftTop_AAG.Controls.Add(this.buttonOpenData_AAG);
-            this.panelLeftTop_AAG.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLeftTop_AAG.Location = new System.Drawing.Point(0, 0);
-            this.panelLeftTop_AAG.Name = "panelLeftTop_AAG";
-            this.panelLeftTop_AAG.Size = new System.Drawing.Size(207, 100);
-            this.panelLeftTop_AAG.TabIndex = 2;
-            // 
-            // panelLeftButtom_AAG
-            // 
-            this.panelLeftButtom_AAG.Controls.Add(this.CreateReport_AAG);
-            this.panelLeftButtom_AAG.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelLeftButtom_AAG.Location = new System.Drawing.Point(0, 747);
-            this.panelLeftButtom_AAG.Name = "panelLeftButtom_AAG";
-            this.panelLeftButtom_AAG.Size = new System.Drawing.Size(207, 100);
-            this.panelLeftButtom_AAG.TabIndex = 3;
-            // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(207, 121);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 847);
-            this.splitter1.TabIndex = 4;
-            this.splitter1.TabStop = false;
-            // 
-            // panelCenter_AAG
-            // 
-            this.panelCenter_AAG.Controls.Add(this.dataGridViewStaff_AAG);
-            this.panelCenter_AAG.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCenter_AAG.Location = new System.Drawing.Point(210, 121);
-            this.panelCenter_AAG.Name = "panelCenter_AAG";
-            this.panelCenter_AAG.Size = new System.Drawing.Size(1508, 847);
-            this.panelCenter_AAG.TabIndex = 5;
-            // 
-            // buttonEditData_AGG
-            // 
-            this.buttonEditData_AGG.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonEditData_AGG.Location = new System.Drawing.Point(0, 0);
-            this.buttonEditData_AGG.Name = "buttonEditData_AGG";
-            this.buttonEditData_AGG.Size = new System.Drawing.Size(206, 100);
-            this.buttonEditData_AGG.TabIndex = 0;
-            this.buttonEditData_AGG.Text = "Редактировать данные";
-            this.buttonEditData_AGG.UseVisualStyleBackColor = true;
-            this.buttonEditData_AGG.Click += new System.EventHandler(this.EditDataClick);
-            // 
-            // panelRightTop_AAG
-            // 
-            this.panelRightTop_AAG.Controls.Add(this.buttonEditData_AGG);
-            this.panelRightTop_AAG.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelRightTop_AAG.Location = new System.Drawing.Point(0, 0);
-            this.panelRightTop_AAG.Name = "panelRightTop_AAG";
-            this.panelRightTop_AAG.Size = new System.Drawing.Size(206, 100);
-            this.panelRightTop_AAG.TabIndex = 1;
-            // 
-            // buttonSaveEdit_AGG
-            // 
-            this.buttonSaveEdit_AGG.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSaveEdit_AGG.Enabled = false;
-            this.buttonSaveEdit_AGG.Location = new System.Drawing.Point(0, 0);
-            this.buttonSaveEdit_AGG.Name = "buttonSaveEdit_AGG";
-            this.buttonSaveEdit_AGG.Size = new System.Drawing.Size(206, 69);
-            this.buttonSaveEdit_AGG.TabIndex = 2;
-            this.buttonSaveEdit_AGG.Text = "Сохранить";
-            this.buttonSaveEdit_AGG.UseVisualStyleBackColor = true;
-            this.buttonSaveEdit_AGG.Click += new System.EventHandler(this.ClickSaveData);
-            // 
-            // panelLeftTop2_AAG
-            // 
-            this.panelLeftTop2_AAG.Controls.Add(this.buttonSaveEdit_AGG);
-            this.panelLeftTop2_AAG.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLeftTop2_AAG.Location = new System.Drawing.Point(0, 100);
-            this.panelLeftTop2_AAG.Name = "panelLeftTop2_AAG";
-            this.panelLeftTop2_AAG.Size = new System.Drawing.Size(206, 69);
-            this.panelLeftTop2_AAG.TabIndex = 3;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 848);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1439, 22);
+            this.panel4.TabIndex = 4;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 968);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1896, 968);
+            this.Controls.Add(this.splitterRight2_AAG);
+            this.Controls.Add(this.panelCentreRight_AAG);
+            this.Controls.Add(this.splitterRight_AAG);
             this.Controls.Add(this.panelCenter_AAG);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.panelLeft_AAG);
@@ -312,14 +433,14 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главное окно";
             this.Load += new System.EventHandler(this.FormMain_Load);
-            this.panelRight_AAG.ResumeLayout(false);
             this.panelLeft_AAG.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStaff_AAG)).EndInit();
-            this.panelLeftTop_AAG.ResumeLayout(false);
             this.panelLeftButtom_AAG.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStaff_AAG)).EndInit();
             this.panelCenter_AAG.ResumeLayout(false);
-            this.panelRightTop_AAG.ResumeLayout(false);
-            this.panelLeftTop2_AAG.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panelCentreRight_AAG.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -332,26 +453,31 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
         private System.Windows.Forms.DataGridView dataGridViewStaff_AAG;
         private System.Windows.Forms.Button CreateReport_AAG;
         private System.Windows.Forms.OpenFileDialog OpenFileDialogData_AAG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Familia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NameS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HausAddres;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Birhday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Staff;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DateOpen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Staz;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Education;
         private System.Windows.Forms.Panel panelLeftButtom_AAG;
-        private System.Windows.Forms.Panel panelLeftTop_AAG;
-        private System.Windows.Forms.Button buttonOpenData_AAG;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Panel panelCenter_AAG;
-        private System.Windows.Forms.Panel panelRightTop_AAG;
         private System.Windows.Forms.Button buttonEditData_AGG;
         private System.Windows.Forms.Button buttonSaveEdit_AGG;
         private System.Windows.Forms.SaveFileDialog saveFileDialogData_AAG;
-        private System.Windows.Forms.Panel panelLeftTop2_AAG;
+        private System.Windows.Forms.Button buttonOpenData_AAG;
+        private System.Windows.Forms.Button buttonAboutMe_AAG;
+        private System.Windows.Forms.Button buttonHelp_AAG;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Splitter splitterRight_AAG;
+        private System.Windows.Forms.Panel panelCentreRight_AAG;
+        private System.Windows.Forms.Splitter splitterRight2_AAG;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Familia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Birhday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Salary;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Staff;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Staz;
+        private System.Windows.Forms.Panel panel4;
     }
 }
 

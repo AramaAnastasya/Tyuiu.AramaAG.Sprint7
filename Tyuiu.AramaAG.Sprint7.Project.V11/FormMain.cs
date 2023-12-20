@@ -28,11 +28,11 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
         DataService ds = new DataService();
         private void FormMain_Load(object sender, EventArgs e)
         {
-            dataGridViewStaff_AAG.ColumnCount = 10;
-            dataGridViewStaff_AAG.RowCount = 10;
+            dataGridViewStaff_AAG.ColumnCount = 7;
+            dataGridViewStaff_AAG.RowCount = 7;
             dataGridViewStaff_AAG.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 7; i++)
             {
                 dataGridViewStaff_AAG.Columns[i].Width = 75;
             }
@@ -144,5 +144,22 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
                 buttonSaveEdit_AGG.Enabled = false;
             }
         }
+
+        private void buttonAboutMe_AAG_Click(object sender, EventArgs e)
+        {
+            FormAbout formAbout = new FormAbout();
+            formAbout.ShowDialog();
+        }
+
+        private void buttonHelp_AAG_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewStaff_AAG_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
     }
 }
