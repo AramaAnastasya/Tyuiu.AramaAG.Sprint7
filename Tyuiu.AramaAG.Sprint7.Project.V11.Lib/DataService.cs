@@ -13,15 +13,6 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11.Lib
         {
             string[,] array = GetMatrix(path);
             int row = array.GetUpperBound(0) + 1;
-            //int column = array.GetUpperBound(1) + 1;
-            //int count = 0;
-            //for(int i = 0; i < row; i++)
-            //{
-            //    for (int j = 0; j  < column; j ++)
-            //    {
-            //        summ = array[i, 4];
-            //    }
-            //}
             return row;
         }
 
