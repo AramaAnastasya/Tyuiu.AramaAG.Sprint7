@@ -18,6 +18,7 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
         {
             InitializeComponent();
             output();
+            Sort();
         }
 
         public BindingList<Staffs> staffList;
@@ -32,8 +33,6 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             public int Salary { get; set; }
             public string Staff1 { get; set; }
             public int Staz { get; set; }
-
-
 
             public Staffs()
             {
@@ -67,35 +66,8 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             buttonSaveEdit_AGG.Enabled = true;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-
-        static string OpenFilePath = "C:/Users/Lenovo/Downloads/Данные — копия2.0.csv";
-        static int rows;
-        static int columns;
-        public static string[,] LoadFromFileDta(string FilePath)
-        {
-            string fileDta = File.ReadAllText(FilePath, Encoding.UTF8);
-            fileDta = fileDta.Replace('\n', '\r');
-            string[] lines = fileDta.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
-
-            rows = lines.Length;
-            columns = lines[0].Split(';').Length;
-            string[,] arrayValues = new string[rows, columns];
-            for (int i = 0; i < rows; i++)
-            {
-
-                for (int j = 0; j < columns; j++)
-                {
-                    string[] line_r = lines[i].Split(';');
-                    arrayValues[i, j] = line_r[j];
-                }
-            }
-            return arrayValues;
-        }
+        static string OpenFilePath;
 
         private void CreateReportClick_AAG(object sender, EventArgs e)
         {
@@ -110,14 +82,13 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             OpenFilePath = OpenFileDialogData_AAG.FileName;
             try
             {
-                //string filePath = OpenFileDialogData_AAG.FileName;
                 string[] lines = File.ReadAllLines(OpenFilePath);
 
                 staffList.Clear();
                 for (int i = 0; i < lines.Length; i++)
                 {
                     string[] values = lines[i].Split(';');
-                string po = values[0];
+                    string po = values[0];
                     staffList.Add(new Staffs
                     {
                         Familia = values[0],
@@ -129,20 +100,6 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
                         Staz = Convert.ToInt32(values[6])
                     });
                 }
-
-
-                //string[,] arrayValues = LoadFromFileDta(OpenFilePath);
-                //dataGridViewStaff_AAG.ColumnCount = columns;
-                //dataGridViewStaff_AAG.RowCount = rows;
-                //for (int i = 0; i < rows; i++)
-                //{
-                //    for (int j = 0; j < columns; j++)
-                //    {
-                //        dataGridViewStaff_AAG.Rows[i].Cells[j].Value = arrayValues[i, j];
-                //    }
-
-
-                //}
             }
             catch (Exception ex)
             {
@@ -157,21 +114,18 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
                 dataGridViewStaff_AAG.Columns[i].ReadOnly = false;
             }
             buttonSaveEdit_AGG.Enabled = true;
+            MessageBox.Show("После редактирования необходимо сохранить данные в файле!", "Сообщение");
         }
 
         private void ClickSaveData(object sender, EventArgs e)
         {
-            saveFileDialogData_AAG.FileName = "Данные1.csv";
+            saveFileDialogData_AAG.FileName = "Данные.csv";
             saveFileDialogData_AAG.InitialDirectory = Directory.GetCurrentDirectory();
             saveFileDialogData_AAG.ShowDialog();
             string path = saveFileDialogData_AAG.FileName;
 
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
-            if (fileExists)
-            {
-                File.Delete(path);
-            }
 
             int rows = dataGridViewStaff_AAG.RowCount;
             int columns = dataGridViewStaff_AAG.ColumnCount;
@@ -250,48 +204,19 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
                 textBoxStaff_AAG.Visible = false;
                 textBoxStaz_AAG.Visible = false;
             }
+            MessageBox.Show(staffList.Count().ToString());
+            staffList.Add(new Staffs
+            {
+                Familia = textBoxFamilia_AAG.Text,
+                Name = textBoxName_AAG.Text,
+                LastName = textBoxLastName_AAG.Text,
+                BirhtDay = textBoxBirhtDay_AAG.Text,
+                Salary = Convert.ToInt32(textBoxSalary_AAG.Text),
+                Staff1 = textBoxStaff_AAG.Text,
+                Staz = Convert.ToInt32(textBoxStaz_AAG.Text)
+            });
 
-            //string[,] array = new string[dataGridViewStaff_AAG.Rows.Count + 1, columns];
-            //MessageBox.Show(dataGridViewStaff_AAG.Rows.Count.ToString());
-            //for (int i = 0; i <= dataGridViewStaff_AAG.Rows.Count; i++)
-            //{
-            //    for (int j = 0; j < columns; j++)
-            //    {
-            //        if (i == dataGridViewStaff_AAG.Rows.Count)
-            //        {
-            //            if(j == 0)
-            //                array[i, j] = textBoxFamilia_AAG.Text;
-            //            if (j == 1)
-            //                array[i, j] = textBoxName_AAG.Text;
-            //            if (j == 2)
-            //                array[i, j] = textBoxLastName_AAG.Text;
-            //            if (j == 3)
-            //                array[i, j] = textBoxBirhtDay_AAG.Text;
-            //            if (j == 4)
-            //                array[i, j] = textBoxSalary_AAG.Text;
-            //            if (j == 5)
-            //                array[i, j] = textBoxStaff_AAG.Text;
-            //            if (j == 6)
-            //                array[i, j] = textBoxStaz_AAG.Text;
-            //        }
-            //        else
-            //        {
-                        
-            //            array[i, j] = dataGridViewStaff_AAG.Rows[i].Cells[j].Value.ToString();
-            //        }
-            //    }
-            //}
-            //dataGridViewStaff_AAG.ColumnCount = columns;
-            //dataGridViewStaff_AAG.RowCount = dataGridViewStaff_AAG.Rows.Count + 1;
-            //for (int i = 0; i < dataGridViewStaff_AAG.Rows.Count; i++)
-            //{
-            //    for (int j = 0; j < columns; j++)
-            //    {
-            //        dataGridViewStaff_AAG.Rows[i].Cells[j].Value = array[i, j];
-            //    }
-            //}
-
-            DialogResult result = MessageBox.Show("Рекомендуем пересохранить данные в файле!\nСохранить?","Сообщение",MessageBoxButtons.YesNo,MessageBoxIcon.Information);
+            DialogResult result = MessageBox.Show("Рекомендуем пересохранить данные в файле!\nСохранить?", "Сообщение", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (result == DialogResult.Yes)
             {
                 SaveData();
@@ -345,9 +270,125 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             }
         }
 
+
+        public void Search()
+        {
+            if (textBoxSearch_AAG.Text.Trim() == "")
+            {
+                dataGridViewStaff_AAG.DataSource = bindingSource;
+            }
+            else
+            {
+                var Results = staffList.Where(staff =>
+                    staff.Familia.ToString().Contains(textBoxSearch_AAG.Text) ||
+                    staff.Name.ToString().Contains(textBoxSearch_AAG.Text) ||
+                    staff.LastName.ToString().Contains(textBoxSearch_AAG.Text) ||
+                    staff.BirhtDay.ToString().Contains(textBoxSearch_AAG.Text) ||
+                    staff.Salary.ToString().Contains(textBoxSearch_AAG.Text) ||
+                    staff.Staff1.ToString().Contains(textBoxSearch_AAG.Text) ||
+                    staff.Staz.ToString().Contains(textBoxSearch_AAG.Text)
+                ).ToList();
+                dataGridViewStaff_AAG.DataSource = new BindingList<Staffs>(Results);
+            }
+        }
+
         private void textBoxSearch_AAG_TextChanged(object sender, EventArgs e)
         {
-            
+            Search();
         }
+
+        public void Sort()
+        {
+            comboBoxSort_AAG.Items.AddRange(new string[] { "По умолчанию", "Фамилия", "Имя", "Отчество", "День рождение", "Зарплата", "Должность", "Стаж" });
+            comboBoxSort_AAG.SelectedIndex = 0;
+        }
+
+        public SortOrder currentSortOrder = SortOrder.Ascending;
+        private void comboBoxSort_AAG_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //    //currentSortOrder = currentSortOrder == SortOrder.Ascending ? currentSortOrder = SortOrder.Ascending : currentSortOrder = SortOrder.Descending;
+            //    //dataGridViewStaff_AAG.DataSource = staffList;
+            if (currentSortOrder == SortOrder.Ascending)
+            {
+                switch (comboBoxSort_AAG.SelectedIndex)
+                {
+                    case 0:
+                        staffList = new BindingList<Staffs>(staffList.OrderBy(x => x.Familia).ToList());
+                        currentSortOrder = SortOrder.Descending;
+                        break;
+                    case 1:
+                        staffList = new BindingList<Staffs>(staffList.OrderBy(x => x.Familia).ToList());
+                        currentSortOrder = SortOrder.Descending;
+                        break;
+                    case 2:
+                        staffList = new BindingList<Staffs>(staffList.OrderBy(x => x.Name).ToList());
+                        currentSortOrder = SortOrder.Descending;
+                        break;
+                    case 3:
+                        staffList = new BindingList<Staffs>(staffList.OrderBy(x => x.LastName).ToList());
+                        currentSortOrder = SortOrder.Descending;
+                        break;
+                    case 4:
+                        staffList = new BindingList<Staffs>(staffList.OrderBy(x => x.BirhtDay).ToList());
+                        currentSortOrder = SortOrder.Descending;
+                        break;
+                    case 5:
+                        staffList = new BindingList<Staffs>(staffList.OrderBy(x => x.Salary).ToList());
+                        currentSortOrder = SortOrder.Descending;
+                        break;
+                    case 6:
+                        staffList = new BindingList<Staffs>(staffList.OrderBy(x => x.Staff1).ToList());
+                        currentSortOrder = SortOrder.Descending;
+                        break;
+                    case 7:
+                        staffList = new BindingList<Staffs>(staffList.OrderBy(x => x.Staz).ToList());
+                        currentSortOrder = SortOrder.Descending;
+                        break;
+                }
+            }
+            else
+            {
+                switch (comboBoxSort_AAG.SelectedIndex)
+                {
+                    case 0:
+                        staffList = new BindingList<Staffs>(staffList.OrderByDescending(x => x.Familia).ToList());
+                        currentSortOrder = SortOrder.Ascending;
+                        break;
+                    case 1:
+                        staffList = new BindingList<Staffs>(staffList.OrderByDescending(x => x.Familia).ToList());
+                        currentSortOrder = SortOrder.Ascending;
+                        break;
+                    case 2:
+                        staffList = new BindingList<Staffs>(staffList.OrderByDescending(x => x.Name).ToList());
+                        currentSortOrder = SortOrder.Ascending;
+                        break;
+                    case 3:
+                        staffList = new BindingList<Staffs>(staffList.OrderByDescending(x => x.LastName).ToList());
+                        currentSortOrder = SortOrder.Ascending;
+                        break;
+                    case 4:
+                        staffList = new BindingList<Staffs>(staffList.OrderByDescending(x => x.BirhtDay).ToList());
+                        currentSortOrder = SortOrder.Ascending;
+                        break;
+                    case 5:
+                        staffList = new BindingList<Staffs>(staffList.OrderByDescending(x => x.Salary).ToList());
+                        currentSortOrder = SortOrder.Ascending;
+                        break;
+                    case 6:
+                        staffList = new BindingList<Staffs>(staffList.OrderByDescending(x => x.Staff1).ToList());
+                        currentSortOrder = SortOrder.Ascending;
+                        break;
+                    case 7:
+                        staffList = new BindingList<Staffs>(staffList.OrderByDescending(x => x.Staz).ToList());
+                        currentSortOrder = SortOrder.Ascending;
+                        break;
+                }
+            }
+            //    MessageBox.Show("++++++++++++");
+            //    //currentSortOrder = currentSortOrder == SortOrder.Ascending ? currentSortOrder = SortOrder.Descending : currentSortOrder = SortOrder.Ascending;
+            dataGridViewStaff_AAG.DataSource = staffList;
+        }
+
+
     }
 }

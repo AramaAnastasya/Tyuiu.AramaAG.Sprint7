@@ -21,7 +21,7 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11.Lib
             string[,] array = GetMatrix(path);
             int row = array.GetUpperBound(0) + 1;
             int column = array.Length / row;
-            int maxExp = 1000;//переделать 
+            int maxExp = int.MaxValue;
             for (int i = 0; i < row; i++)
             {
                 for (int j = 7; j < column; j++)
@@ -51,7 +51,6 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11.Lib
                 for (int j = 0; j < columns; j++)
                 {
                     arrayValues[i, j] = line_r[j];
-
                 }
             }
             return arrayValues;

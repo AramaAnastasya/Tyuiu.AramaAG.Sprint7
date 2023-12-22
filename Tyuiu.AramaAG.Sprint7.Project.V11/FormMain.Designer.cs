@@ -61,10 +61,11 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             this.saveFileDialogData_AAG = new System.Windows.Forms.SaveFileDialog();
             this.splitterRight_AAG = new System.Windows.Forms.Splitter();
             this.panelCentreRight_AAG = new System.Windows.Forms.Panel();
+            this.dataGridViewStaff_AAG = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.splitterRight2_AAG = new System.Windows.Forms.Splitter();
             this.toolTipInfo_AAG = new System.Windows.Forms.ToolTip(this.components);
-            this.dataGridViewStaff_AAG = new System.Windows.Forms.DataGridView();
+            this.comboBoxSort_AAG = new System.Windows.Forms.ComboBox();
             this.panelTop_AAG.SuspendLayout();
             this.panelRight_AAG.SuspendLayout();
             this.panelLeft_AAG.SuspendLayout();
@@ -74,6 +75,7 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             // 
             // panelTop_AAG
             // 
+            this.panelTop_AAG.Controls.Add(this.comboBoxSort_AAG);
             this.panelTop_AAG.Controls.Add(this.label1);
             this.panelTop_AAG.Controls.Add(this.buttonAboutMe_AAG);
             this.panelTop_AAG.Controls.Add(this.textBoxSearch_AAG);
@@ -86,11 +88,12 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 43);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(12, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 20);
+            this.label1.Size = new System.Drawing.Size(251, 40);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Сотрудники";
+            this.label1.Text = "Отдел кадров";
             // 
             // buttonAboutMe_AAG
             // 
@@ -113,10 +116,12 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             // 
             // textBoxSearch_AAG
             // 
-            this.textBoxSearch_AAG.Location = new System.Drawing.Point(224, 66);
+            this.textBoxSearch_AAG.Location = new System.Drawing.Point(305, 38);
+            this.textBoxSearch_AAG.Multiline = true;
             this.textBoxSearch_AAG.Name = "textBoxSearch_AAG";
-            this.textBoxSearch_AAG.Size = new System.Drawing.Size(128, 26);
+            this.textBoxSearch_AAG.Size = new System.Drawing.Size(246, 36);
             this.textBoxSearch_AAG.TabIndex = 0;
+            this.textBoxSearch_AAG.TabStop = false;
             this.textBoxSearch_AAG.TextChanged += new System.EventHandler(this.textBoxSearch_AAG_TextChanged);
             // 
             // panelRight_AAG
@@ -139,7 +144,7 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             this.panelRight_AAG.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelRight_AAG.Location = new System.Drawing.Point(1267, 98);
             this.panelRight_AAG.Name = "panelRight_AAG";
-            this.panelRight_AAG.Size = new System.Drawing.Size(211, 870);
+            this.panelRight_AAG.Size = new System.Drawing.Size(211, 646);
             this.panelRight_AAG.TabIndex = 1;
             // 
             // buttonSavePeople_AAG
@@ -295,7 +300,6 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             // 
             this.buttonSaveEdit_AGG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(214)))), ((int)(((byte)(232)))));
             this.buttonSaveEdit_AGG.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSaveEdit_AGG.Enabled = false;
             this.buttonSaveEdit_AGG.FlatAppearance.BorderSize = 0;
             this.buttonSaveEdit_AGG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSaveEdit_AGG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(72)))), ((int)(((byte)(168)))));
@@ -333,7 +337,7 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             this.panelLeft_AAG.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft_AAG.Location = new System.Drawing.Point(0, 98);
             this.panelLeft_AAG.Name = "panelLeft_AAG";
-            this.panelLeft_AAG.Size = new System.Drawing.Size(185, 870);
+            this.panelLeft_AAG.Size = new System.Drawing.Size(185, 646);
             this.panelLeft_AAG.TabIndex = 2;
             // 
             // buttonOpenData_AAG
@@ -379,7 +383,7 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             this.buttonHelp_AAG.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.buttonHelp_AAG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(113)))), ((int)(((byte)(209)))));
             this.buttonHelp_AAG.Image = global::Tyuiu.AramaAG.Sprint7.Project.V11.Properties.Resources.Help;
-            this.buttonHelp_AAG.Location = new System.Drawing.Point(28, 744);
+            this.buttonHelp_AAG.Location = new System.Drawing.Point(39, 491);
             this.buttonHelp_AAG.Name = "buttonHelp_AAG";
             this.buttonHelp_AAG.Size = new System.Drawing.Size(107, 102);
             this.buttonHelp_AAG.TabIndex = 4;
@@ -397,7 +401,7 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             // 
             this.splitter1.Location = new System.Drawing.Point(185, 98);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 870);
+            this.splitter1.Size = new System.Drawing.Size(3, 646);
             this.splitter1.TabIndex = 4;
             this.splitter1.TabStop = false;
             // 
@@ -405,7 +409,7 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             // 
             this.splitterRight_AAG.Location = new System.Drawing.Point(188, 98);
             this.splitterRight_AAG.Name = "splitterRight_AAG";
-            this.splitterRight_AAG.Size = new System.Drawing.Size(3, 870);
+            this.splitterRight_AAG.Size = new System.Drawing.Size(3, 646);
             this.splitterRight_AAG.TabIndex = 6;
             this.splitterRight_AAG.TabStop = false;
             // 
@@ -417,24 +421,8 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             this.panelCentreRight_AAG.Location = new System.Drawing.Point(191, 98);
             this.panelCentreRight_AAG.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.panelCentreRight_AAG.Name = "panelCentreRight_AAG";
-            this.panelCentreRight_AAG.Size = new System.Drawing.Size(1076, 870);
+            this.panelCentreRight_AAG.Size = new System.Drawing.Size(1076, 646);
             this.panelCentreRight_AAG.TabIndex = 7;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 846);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1076, 24);
-            this.panel4.TabIndex = 4;
-            // 
-            // splitterRight2_AAG
-            // 
-            this.splitterRight2_AAG.Location = new System.Drawing.Point(191, 98);
-            this.splitterRight2_AAG.Name = "splitterRight2_AAG";
-            this.splitterRight2_AAG.Size = new System.Drawing.Size(3, 870);
-            this.splitterRight2_AAG.TabIndex = 8;
-            this.splitterRight2_AAG.TabStop = false;
             // 
             // dataGridViewStaff_AAG
             // 
@@ -447,15 +435,42 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             this.dataGridViewStaff_AAG.RowHeadersVisible = false;
             this.dataGridViewStaff_AAG.RowHeadersWidth = 62;
             this.dataGridViewStaff_AAG.RowTemplate.Height = 28;
-            this.dataGridViewStaff_AAG.Size = new System.Drawing.Size(1076, 846);
+            this.dataGridViewStaff_AAG.Size = new System.Drawing.Size(1076, 622);
             this.dataGridViewStaff_AAG.TabIndex = 5;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 622);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1076, 24);
+            this.panel4.TabIndex = 4;
+            // 
+            // splitterRight2_AAG
+            // 
+            this.splitterRight2_AAG.Location = new System.Drawing.Point(191, 98);
+            this.splitterRight2_AAG.Name = "splitterRight2_AAG";
+            this.splitterRight2_AAG.Size = new System.Drawing.Size(3, 646);
+            this.splitterRight2_AAG.TabIndex = 8;
+            this.splitterRight2_AAG.TabStop = false;
+            // 
+            // comboBoxSort_AAG
+            // 
+            this.comboBoxSort_AAG.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxSort_AAG.FormattingEnabled = true;
+            this.comboBoxSort_AAG.Location = new System.Drawing.Point(663, 38);
+            this.comboBoxSort_AAG.Name = "comboBoxSort_AAG";
+            this.comboBoxSort_AAG.Size = new System.Drawing.Size(196, 28);
+            this.comboBoxSort_AAG.TabIndex = 4;
+            this.comboBoxSort_AAG.TabStop = false;
+            this.comboBoxSort_AAG.SelectedIndexChanged += new System.EventHandler(this.comboBoxSort_AAG_SelectedIndexChanged);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(214)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(1478, 968);
+            this.ClientSize = new System.Drawing.Size(1478, 744);
             this.Controls.Add(this.splitterRight2_AAG);
             this.Controls.Add(this.panelCentreRight_AAG);
             this.Controls.Add(this.splitterRight_AAG);
@@ -463,7 +478,7 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             this.Controls.Add(this.panelLeft_AAG);
             this.Controls.Add(this.panelRight_AAG);
             this.Controls.Add(this.panelTop_AAG);
-            this.MinimumSize = new System.Drawing.Size(1500, 1024);
+            this.MinimumSize = new System.Drawing.Size(1500, 800);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главное окно";
@@ -515,6 +530,7 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
         private System.Windows.Forms.TextBox textBoxSearch_AAG;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewStaff_AAG;
+        private System.Windows.Forms.ComboBox comboBoxSort_AAG;
     }
 }
 
