@@ -31,6 +31,7 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
         {
             this.components = new System.ComponentModel.Container();
             this.panelTop_AAG = new System.Windows.Forms.Panel();
+            this.comboBoxSort_AAG = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonAboutMe_AAG = new System.Windows.Forms.Button();
             this.textBoxSearch_AAG = new System.Windows.Forms.TextBox();
@@ -53,6 +54,7 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             this.buttonSaveEdit_AGG = new System.Windows.Forms.Button();
             this.buttonEditData_AGG = new System.Windows.Forms.Button();
             this.panelLeft_AAG = new System.Windows.Forms.Panel();
+            this.CreateReport_AAG = new System.Windows.Forms.Button();
             this.buttonOpenData_AAG = new System.Windows.Forms.Button();
             this.buttonADDData_AAG = new System.Windows.Forms.Button();
             this.buttonHelp_AAG = new System.Windows.Forms.Button();
@@ -65,7 +67,6 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             this.panel4 = new System.Windows.Forms.Panel();
             this.splitterRight2_AAG = new System.Windows.Forms.Splitter();
             this.toolTipInfo_AAG = new System.Windows.Forms.ToolTip(this.components);
-            this.comboBoxSort_AAG = new System.Windows.Forms.ComboBox();
             this.panelTop_AAG.SuspendLayout();
             this.panelRight_AAG.SuspendLayout();
             this.panelLeft_AAG.SuspendLayout();
@@ -84,6 +85,17 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             this.panelTop_AAG.Name = "panelTop_AAG";
             this.panelTop_AAG.Size = new System.Drawing.Size(1478, 98);
             this.panelTop_AAG.TabIndex = 0;
+            // 
+            // comboBoxSort_AAG
+            // 
+            this.comboBoxSort_AAG.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxSort_AAG.FormattingEnabled = true;
+            this.comboBoxSort_AAG.Location = new System.Drawing.Point(861, 38);
+            this.comboBoxSort_AAG.Name = "comboBoxSort_AAG";
+            this.comboBoxSort_AAG.Size = new System.Drawing.Size(196, 28);
+            this.comboBoxSort_AAG.TabIndex = 4;
+            this.comboBoxSort_AAG.TabStop = false;
+            this.comboBoxSort_AAG.SelectedIndexChanged += new System.EventHandler(this.comboBoxSort_AAG_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -116,7 +128,7 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             // 
             // textBoxSearch_AAG
             // 
-            this.textBoxSearch_AAG.Location = new System.Drawing.Point(305, 38);
+            this.textBoxSearch_AAG.Location = new System.Drawing.Point(413, 38);
             this.textBoxSearch_AAG.Multiline = true;
             this.textBoxSearch_AAG.Name = "textBoxSearch_AAG";
             this.textBoxSearch_AAG.Size = new System.Drawing.Size(246, 36);
@@ -300,6 +312,7 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             // 
             this.buttonSaveEdit_AGG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(214)))), ((int)(((byte)(232)))));
             this.buttonSaveEdit_AGG.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSaveEdit_AGG.Enabled = false;
             this.buttonSaveEdit_AGG.FlatAppearance.BorderSize = 0;
             this.buttonSaveEdit_AGG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSaveEdit_AGG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(72)))), ((int)(((byte)(168)))));
@@ -329,6 +342,7 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             // 
             // panelLeft_AAG
             // 
+            this.panelLeft_AAG.Controls.Add(this.CreateReport_AAG);
             this.panelLeft_AAG.Controls.Add(this.buttonOpenData_AAG);
             this.panelLeft_AAG.Controls.Add(this.buttonADDData_AAG);
             this.panelLeft_AAG.Controls.Add(this.buttonEditData_AGG);
@@ -339,6 +353,22 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             this.panelLeft_AAG.Name = "panelLeft_AAG";
             this.panelLeft_AAG.Size = new System.Drawing.Size(185, 646);
             this.panelLeft_AAG.TabIndex = 2;
+            // 
+            // CreateReport_AAG
+            // 
+            this.CreateReport_AAG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(214)))), ((int)(((byte)(232)))));
+            this.CreateReport_AAG.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CreateReport_AAG.FlatAppearance.BorderSize = 0;
+            this.CreateReport_AAG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CreateReport_AAG.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CreateReport_AAG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(72)))), ((int)(((byte)(168)))));
+            this.CreateReport_AAG.Location = new System.Drawing.Point(0, 283);
+            this.CreateReport_AAG.Name = "CreateReport_AAG";
+            this.CreateReport_AAG.Size = new System.Drawing.Size(184, 81);
+            this.CreateReport_AAG.TabIndex = 5;
+            this.CreateReport_AAG.Text = "Просмотр диаграмм";
+            this.CreateReport_AAG.UseVisualStyleBackColor = false;
+            this.CreateReport_AAG.Click += new System.EventHandler(this.CreateReportClick_AAG);
             // 
             // buttonOpenData_AAG
             // 
@@ -454,17 +484,6 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
             this.splitterRight2_AAG.TabIndex = 8;
             this.splitterRight2_AAG.TabStop = false;
             // 
-            // comboBoxSort_AAG
-            // 
-            this.comboBoxSort_AAG.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBoxSort_AAG.FormattingEnabled = true;
-            this.comboBoxSort_AAG.Location = new System.Drawing.Point(663, 38);
-            this.comboBoxSort_AAG.Name = "comboBoxSort_AAG";
-            this.comboBoxSort_AAG.Size = new System.Drawing.Size(196, 28);
-            this.comboBoxSort_AAG.TabIndex = 4;
-            this.comboBoxSort_AAG.TabStop = false;
-            this.comboBoxSort_AAG.SelectedIndexChanged += new System.EventHandler(this.comboBoxSort_AAG_SelectedIndexChanged);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -531,6 +550,7 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewStaff_AAG;
         private System.Windows.Forms.ComboBox comboBoxSort_AAG;
+        private System.Windows.Forms.Button CreateReport_AAG;
     }
 }
 

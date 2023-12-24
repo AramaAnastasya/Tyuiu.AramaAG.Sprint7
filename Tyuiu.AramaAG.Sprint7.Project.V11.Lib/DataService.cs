@@ -21,12 +21,12 @@ namespace Tyuiu.AramaAG.Sprint7.Project.V11.Lib
             string[,] array = GetMatrix(path);
             int row = array.GetUpperBound(0) + 1;
             int column = array.Length / row;
-            int maxExp = int.MaxValue;
+            int maxExp = int.MinValue;
             for (int i = 0; i < row; i++)
             {
-                for (int j = 7; j < column; j++)
+                for (int j = 6; j < column; j++)
                 {
-                    if(Convert.ToInt32(array[i, j]) <= maxExp)
+                    if(Convert.ToInt32(array[i, j]) >= maxExp)
                     {
                         maxExp = Convert.ToInt32(array[i, j]);
                     }
